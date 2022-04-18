@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Pacifico&display=swap");
+@tailwind base;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+	h1 {
+		@apply text-4xl font-bold;
+	}
+	h2 {
+		@apply text-3xl font-bold;
+	}
+	h3 {
+		@apply text-2xl font-bold;
+	}
+	h4 {
+		@apply text-xl font-bold;
+	}
+	h5 {
+		@apply text-lg font-bold;
+	}
+	h6 {
+		@apply text-sm font-bold;
+	}
 }
+@tailwind components;
+
+@layer components {
+	.btn {
+		@apply rounded-sm font-sans font-semibold;
+	}
+	.btn-success {
+		@apply btn bg-green-400 rounded-3xl text-white hover:bg-green-300 hover:text-gray-700 py-1 px-3;
+	}
+	.btn-error {
+		@apply btn bg-red-500 rounded-3xl text-white hover:bg-red-400 hover:text-gray-700 py-1 px-3;
+	}
+}
+@tailwind utilities;
